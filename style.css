@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    background-color: #040441;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:20px 10%;
+    background-color: #2f2ff6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: azure;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards; /* Added duration to the animation */
+}
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: azure;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .5s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards .2s; /* Added delay for sequential animation */
+}
+.navbar a:hover{
+    color: rgb(31, 86, 126);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 10% 0;
+    min-height: calc(100vh - 60px);
+}
+.home-content {
+    max-width: 600px;
+    color: rgb(48, 212, 212); /* Keeping the existing color */
+    opacity: 0;
+    animation: fadeIn 1s ease forwards .4s; /* Added fade-in animation with delay */
+}
+.home-content h2 { /* Targeting the main "Hello Everyone." and "Specialized In:" */
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.home-content h1 { /* Targeting "I am Divyansh Bhola" */
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    color: cornflowerblue; /* Keeping the existing color */
+}
+
+.home-content h3 { /* Targeting the typing animation spans */
+    font-size: 24px; /* Adjust as needed */
+    font-weight: 500; /* Adjust as needed */
+    color: azure; /* Adjust as needed */
+}
+.home-content p { /* Targeting the regular paragraph text */
+    font-size: 18px; /* Adjust as needed */
+    color: azure; /* Adjust as needed */
+    margin: 10px 0; /* Add some vertical spacing */
+}
+.home-content h2:nth-of-type(2){
+    margin-bottom: 30px;
+}
+.home-content h2 span{
+    color:dodgerblue
+}
+
+.home-sci a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid azure;
+    border-radius: 50%;
+    font-size: 20px;
+    color: azure;
+    text-decoration: none;
+    margin: 30px 15px 25px 0;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease forwards;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards .6s; /* Added slide-left animation with delay */
+}
+.home-sci a:hover {
+    background-color: azure;
+    color: #8282a1;
+    box-shadow: 0 0 30px rgb(197, 237, 237);
+}
+.image-area {
+    width: 300px;
+    max-width: 45%;
+    overflow: hidden;
+    border-radius: 25px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards .8s; /* Added slide-bottom animation with delay */
+}
+.image-area img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    border: 10px solid aqua;
+}
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+
+    }
+    100%{
+        transform: translateX(0px); /* Corrected the final transform value */
+        opacity: 1;
+
+    }
+
+}
+
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
