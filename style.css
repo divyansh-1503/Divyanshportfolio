@@ -280,6 +280,7 @@ body {
 }
 
 .connect h2 {
+  margin-top: 30px;
   color: rgb(23, 155, 155);
   font-size: 60px;
   text-align: center;
