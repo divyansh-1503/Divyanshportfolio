@@ -1,3 +1,4 @@
+/* Existing CSS */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +16,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 10%;
+  padding: 10px 5%; /* Adjusted horizontal padding */
   background-color: #2f2ff6;
   display: flex;
   justify-content: space-between;
@@ -31,16 +32,16 @@ body {
   font-weight: 700;
   cursor: default;
   opacity: 0;
-  animation: slideRight 1s ease forwards; /* Added duration to the animation */
+  animation: slideRight 1s ease forwards;
 }
 
 .navbar a {
   display: inline-block;
-  font-size: 25px;
+  font-size: 18px; /* Reduced font size for better mobile fit */
   color: azure;
   text-decoration: none;
   font-weight: 500;
-  margin-left: 35px;
+  margin-left: 20px; /* Reduced left margin */
   transition: 0.5s;
   opacity: 0;
   animation: slideTop 0.5s ease forwards 0.2s;
@@ -51,51 +52,55 @@ body {
   color: rgb(31, 86, 126);
 }
 
+.mobile-menu {
+  display: none; /* Hidden by default on larger screens */
+  font-size: 25px;
+  color: azure;
+  cursor: pointer;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 10% 0;
+  padding: 80px 5% 0; /* Adjusted horizontal padding */
   min-height: calc(100vh - 60px);
 }
 
 .home-content {
-  max-width: 600px;
-  color: rgb(48, 212, 212); /* Keeping the existing color */
+  max-width: 100%; /* Allow it to take full width on smaller screens */
+  color: rgb(48, 212, 212);
   opacity: 0;
-  animation: fadeIn 1s ease forwards 0.4s; /* Added fade-in animation with delay */
+  animation: fadeIn 1s ease forwards 0.4s;
+  text-align: center; /* Center text on smaller screens */
 }
 
 .home-content h2 {
-  /* Targeting the main "Hello Everyone." and "Specialized In:" */
-  font-size: 32px;
+  font-size: 24px; /* Reduced font size */
   font-weight: 700;
 }
 
 .home-content h1 {
-  /* Targeting "I am Divyansh Bhola" */
-  font-size: 56px;
+  font-size: 40px; /* Reduced font size */
   font-weight: 700;
-  margin: -3px 0;
-  color: cornflowerblue; /* Keeping the existing color */
+  margin: -3px 0 10px; /* Added some bottom margin */
+  color: cornflowerblue;
 }
 
 .home-content h3 {
-  /* Targeting the typing animation spans */
-  font-size: 24px; /* Adjust as needed */
-  font-weight: 500; /* Adjust as needed */
-  color: azure; /* Adjust as needed */
+  font-size: 20px; /* Reduced font size */
+  font-weight: 500;
+  color: azure;
 }
 
 .home-content p {
-  /* Targeting the regular paragraph text */
-  font-size: 18px; /* Adjust as needed */
-  color: azure; /* Adjust as needed */
-  margin: 10px 0; /* Add some vertical spacing */
+  font-size: 16px; /* Reduced font size */
+  color: azure;
+  margin: 10px 0;
 }
 
 .home-content h2:nth-of-type(2) {
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* Reduced margin */
   animation: slideTop 1s ease forwards;
   animation-delay: 0.7s;
 }
@@ -106,29 +111,29 @@ body {
 
 .home-sci {
   display: flex;
-  justify-content: center; /* Center the icons horizontally */
+  justify-content: center;
   align-items: center;
-  margin-top: 30px; /* Adjust top margin as needed */
-  margin-bottom: 25px; /* Adjust bottom margin as needed */
+  margin-top: 20px; /* Reduced top margin */
+  margin-bottom: 20px; /* Reduced bottom margin */
 }
 
 .home-sci a {
   display: inline-flex;
-  width: 40px;
-  height: 40px;
+  width: 35px; /* Slightly smaller icons */
+  height: 35px; /* Slightly smaller icons */
   background: transparent;
   border: 2px solid azure;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 18px; /* Slightly smaller icon font */
   color: azure;
   text-decoration: none;
-  margin: 0 15px; /* Adjust horizontal margin between icons */
+  margin: 0 10px; /* Reduced horizontal margin */
   justify-content: center;
   align-items: center;
   transition: .5s ease forwards;
   opacity: 0;
-  animation: slideLeft 1s ease forwards .6s; /* Keep your existing animation */
-  animation-delay: calc(0.2s * var(--i)); /* Keep your existing delay */
+  animation: slideLeft 1s ease forwards .6s;
+  animation-delay: calc(0.2s * var(--i));
 }
 
 .home-sci a:hover {
@@ -137,14 +142,14 @@ body {
   box-shadow: 0 0 30px rgb(197, 237, 237);
 }
 
-
 .image-area {
-  width: 300px;
-  max-width: 45%;
+  width: 40%; /* Adjust width as percentage */
+  max-width: 300px; /* Keep a maximum width */
   overflow: hidden;
   border-radius: 25px;
   opacity: 0;
-  animation: slideBottom 1s ease forwards 0.8s; /* Added slide-bottom animation with delay */
+  animation: slideBottom 1s ease forwards 0.8s;
+  margin-left: 20px; /* Add some margin for spacing */
 }
 
 .image-area img {
@@ -157,11 +162,11 @@ body {
 
 .btn-box {
   display: inline-flex;
-  padding: 15px 20px;
+  padding: 12px 18px; /* Slightly smaller button */
   background: azure;
   border-radius: 40px;
-  margin-top: 25px;
-  font-size: 16px;
+  margin-top: 20px; /* Reduced top margin */
+  font-size: 14px; /* Reduced font size */
   color: #0d0d68;
   letter-spacing: 1px;
   text-decoration: none;
@@ -177,24 +182,30 @@ body {
 }
 
 .about {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 1.5rem;
-  padding: 80px 10% 6rem; /* Added padding for better spacing */
+  padding: 60px 5% 4rem; /* Adjusted padding */
+  grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  text-align: center; /* Center content on smaller screens */
+}
+
+.about-img {
+  margin-top: 40px; /* Add margin above image when stacked */
+  order: 2; /* Move image below text on smaller screens */
 }
 
 .about-img img {
-  margin-top: 100px  ;
-  width: 50%; /* Make image responsive within its grid cell */
+  width: 70%; /* Make image take more width when stacked */
+  max-width: 300px; /* Keep a maximum width */
   height: auto;
   border-radius: 50px;
   border: 10px solid aqua;
 }
 
+.about-text {
+  order: 1; /* Keep text above image by default */
+}
+
 .about-text h2 {
-  color: rgb(23, 155, 155);
-  font-size: 60px;
+  font-size: 40px; /* Reduced font size */
 }
 
 .about-text h2 span {
@@ -202,101 +213,93 @@ body {
 }
 
 .about-text h4 {
-  font-size: 29px;
+  font-size: 22px; /* Reduced font size */
   font-weight: 600;
   color: aliceblue;
-  line-height: 1.7;
-  margin: 20px 0; /* Increased margin for better spacing */
+  line-height: 1.6;
+  margin: 15px 0; /* Adjusted margin */
 }
 
 .about-text p {
   color: cadetblue;
-  font-size: 18px; /* Adjusted font size for better readability */
-  line-height: 1.6; /* Added line height for better readability */
-  margin-bottom: 30px; /* Added margin at the bottom */
+  font-size: 16px; /* Reduced font size */
+  line-height: 1.5;
+  margin-bottom: 20px; /* Adjusted margin */
 }
 
 .projects {
-  padding: 80px 10% 6rem; /* Consistent padding */
+  padding: 60px 5% 4rem; /* Adjusted padding */
 }
 
 .projects h2 {
-  color: rgb(23, 155, 155);
-  font-size: 60px;
+  font-size: 40px; /* Reduced font size */
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px; /* Adjusted margin */
 }
 
 .project-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Slightly smaller min width */
+  gap: 20px; /* Reduced gap */
 }
 
 .project-card {
-  background: #0a0a33; /* Slightly darker background for cards */
+  background: #0a0a33;
   border-radius: 10px;
-  padding: 20px;
+  padding: 15px; /* Reduced padding */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* .project-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
-} */
-
 .project-card h3 {
-  font-size: 24px;
+  font-size: 20px; /* Reduced font size */
   color: aliceblue;
-  margin-bottom: 10px;
+  margin-bottom: 8px; /* Reduced margin */
 }
 
 .project-card p {
-  font-size: 16px;
+  font-size: 14px; /* Reduced font size */
   color: cadetblue;
-  line-height: 1.5;
-  margin-bottom: 15px;
+  line-height: 1.4;
+  margin-bottom: 12px; /* Reduced margin */
 }
 
 .project-card a {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 8px 15px; /* Smaller button */
   background: azure;
   color: #0d0d68;
   text-decoration: none;
   border-radius: 40px;
   font-weight: 600;
+  font-size: 14px; /* Reduced font size */
   transition: background-color 0.3s ease;
 }
 
 .project-card a:hover {
-  background-color: #b0e0e6; /* Light cyan on hover */
+  background-color: #b0e0e6;
 }
 
 .connect {
-  padding: 80px 10% 6rem; /* Consistent padding */
+  padding: 60px 5% 4rem; /* Adjusted padding */
 }
 
 .connect h2 {
   margin-top: 30px;
   color: rgb(23, 155, 155);
-  font-size: 60px;
+  font-size: 40px; /* Reduced font size */
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px; /* Adjusted margin */
 }
 
 .connect-info {
-  max-width: 600px;
+  max-width: 100%; /* Take full width */
   margin: 0 auto;
   text-align: center;
 }
 
 .connect-info p {
-  font-size: 18px;
+  font-size: 16px; /* Reduced font size */
   color: azure;
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Reduced margin */
 }
 
 .connect-info ul {
@@ -305,20 +308,20 @@ body {
 }
 
 .connect-info ul li {
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Reduced margin */
 }
 
 .connect-info ul li i {
-  font-size: 24px;
+  font-size: 20px; /* Reduced icon size */
   color: azure;
-  margin-right: 10px;
+  margin-right: 8px; /* Reduced margin */
   vertical-align: middle;
 }
 
 .connect-info ul li a {
   color: azure;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px; /* Reduced font size */
   vertical-align: middle;
   transition: color 0.3s ease;
 }
@@ -327,13 +330,115 @@ body {
   color: rgb(23, 155, 155);
 }
 
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .header {
+      padding: 15px 5%; /* Further reduce padding on smaller screens */
+  }
+
+  .navbar {
+      display: none; /* Hide the navigation links by default on smaller screens */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #2f2ff6;
+      padding: 10px 5%;
+      flex-direction: column;
+      align-items: flex-start;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar.active {
+      display: flex; /* Show navigation when the 'active' class is added */
+  }
+
+  .navbar a {
+      display: block;
+      margin: 10px 0;
+      font-size: 20px;
+      opacity: 1; /* Ensure they are visible when the menu is open */
+      animation: none; /* Disable animations in the mobile menu */
+  }
+
+  .mobile-menu {
+      display: block; /* Show the mobile menu icon */
+  }
+
+  .container {
+      flex-direction: column-reverse; /* Stack content and image */
+      padding-top: 60px; /* Adjust top padding */
+      text-align: center; /* Center align content */
+  }
+
+  .home-content {
+      padding: 30px 0; /* Add some vertical padding */
+  }
+
+  .image-area {
+      width: 60%; /* Make image wider */
+      margin: 0 auto 20px; /* Center image and add bottom margin */
+  }
+
+  .about-img {
+      margin-top: 20px; /* Adjust margin */
+  }
+
+  .about-img img {
+      width: 80%; /* Further increase image width */
+  }
+
+  .about-text h2 {
+      font-size: 32px; /* Slightly reduce font size */
+  }
+
+  .projects h2 {
+      font-size: 32px; /* Slightly reduce font size */
+  }
+
+  .connect h2 {
+      font-size: 32px; /* Slightly reduce font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content h1 {
+      font-size: 32px; /* Further reduce for very small screens */
+  }
+
+  .home-content h2 {
+      font-size: 20px; /* Further reduce */
+  }
+
+  .home-content p {
+      font-size: 14px; /* Further reduce */
+  }
+
+  .image-area {
+      width: 80%; /* Even wider */
+  }
+
+  .about-text h2 {
+      font-size: 28px; /* Further reduce */
+  }
+
+  .projects h2 {
+      font-size: 28px; /* Further reduce */
+  }
+
+  .connect h2 {
+      font-size: 28px; /* Further reduce */
+  }
+}
+
+/* Keyframes (no changes needed) */
 @keyframes slideRight {
   0% {
       transform: translateX(-100px);
       opacity: 0;
   }
   100% {
-      transform: translateX(0px); /* Corrected the final transform value */
+      transform: translateX(0px);
       opacity: 1;
   }
 }
