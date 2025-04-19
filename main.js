@@ -10,5 +10,5 @@ const navbar = document.querySelector('.navbar');
 
 mobileMenu.addEventListener('click', () => {
     navbar.classList.toggle('active');
-    mobileMenu.classList.toggle('open'); // Optional: for changing the icon
+    mobileMenu.classList.toggle('open');
 });

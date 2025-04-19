@@ -1,4 +1,4 @@
-/* Existing CSS */
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 5%; /* Adjusted horizontal padding */
+  padding: 10px 5%; 
   background-color: #2f2ff6;
   display: flex;
   justify-content: space-between;
@@ -184,28 +184,28 @@ body {
 .about {
   padding: 60px 5% 4rem; /* Adjusted padding */
   grid-template-columns: 1fr; /* Stack columns on smaller screens */
-  text-align: center; /* Center content on smaller screens */
+  text-align: center; 
 }
 
 .about-img {
-  margin-top: 40px; /* Add margin above image when stacked */
-  order: 2; /* Move image below text on smaller screens */
+  margin-top: 40px;
+  order: 2; 
 }
 
 .about-img img {
-  width: 70%; /* Make image take more width when stacked */
-  max-width: 300px; /* Keep a maximum width */
+  width: 70%; 
+  max-width: 300px;
   height: auto;
   border-radius: 50px;
   border: 10px solid aqua;
 }
 
 .about-text {
-  order: 1; /* Keep text above image by default */
+  order: 1; 
 }
 
 .about-text h2 {
-  font-size: 40px; /* Reduced font size */
+  font-size: 40px;
 }
 
 .about-text h2 span {
@@ -213,33 +213,33 @@ body {
 }
 
 .about-text h4 {
-  font-size: 22px; /* Reduced font size */
+  font-size: 22px;
   font-weight: 600;
   color: aliceblue;
   line-height: 1.6;
-  margin: 15px 0; /* Adjusted margin */
+  margin: 15px 0; 
 }
 
 .about-text p {
   color: cadetblue;
-  font-size: 16px; /* Reduced font size */
+  font-size: 16px; 
   line-height: 1.5;
-  margin-bottom: 20px; /* Adjusted margin */
+  margin-bottom: 20px; 
 }
 
 .projects {
-  padding: 60px 5% 4rem; /* Adjusted padding */
+  padding: 60px 5% 4rem;
 }
 
 .projects h2 {
-  font-size: 40px; /* Reduced font size */
+  font-size: 40px; 
   text-align: center;
-  margin-bottom: 30px; /* Adjusted margin */
+  margin-bottom: 30px; 
 }
 
 .project-container {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Slightly smaller min width */
-  gap: 20px; /* Reduced gap */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; 
 }
 
 .project-card {
@@ -250,27 +250,27 @@ body {
 }
 
 .project-card h3 {
-  font-size: 20px; /* Reduced font size */
+  font-size: 20px; 
   color: aliceblue;
-  margin-bottom: 8px; /* Reduced margin */
+  margin-bottom: 8px;
 }
 
 .project-card p {
-  font-size: 14px; /* Reduced font size */
+  font-size: 14px; 
   color: cadetblue;
   line-height: 1.4;
-  margin-bottom: 12px; /* Reduced margin */
+  margin-bottom: 12px;
 }
 
 .project-card a {
   display: inline-block;
-  padding: 8px 15px; /* Smaller button */
+  padding: 8px 15px; 
   background: azure;
   color: #0d0d68;
   text-decoration: none;
   border-radius: 40px;
   font-weight: 600;
-  font-size: 14px; /* Reduced font size */
+  font-size: 14px; 
   transition: background-color 0.3s ease;
 }
 
@@ -279,27 +279,27 @@ body {
 }
 
 .connect {
-  padding: 60px 5% 4rem; /* Adjusted padding */
+  padding: 60px 5% 4rem;
 }
 
 .connect h2 {
   margin-top: 30px;
   color: rgb(23, 155, 155);
-  font-size: 40px; /* Reduced font size */
+  font-size: 40px; 
   text-align: center;
-  margin-bottom: 30px; /* Adjusted margin */
+  margin-bottom: 30px;
 }
 
 .connect-info {
-  max-width: 100%; /* Take full width */
+  max-width: 100%; 
   margin: 0 auto;
   text-align: center;
 }
 
 .connect-info p {
-  font-size: 16px; /* Reduced font size */
+  font-size: 16px;
   color: azure;
-  margin-bottom: 15px; /* Reduced margin */
+  margin-bottom: 15px;
 }
 
 .connect-info ul {
@@ -308,20 +308,20 @@ body {
 }
 
 .connect-info ul li {
-  margin-bottom: 10px; /* Reduced margin */
+  margin-bottom: 10px;
 }
 
 .connect-info ul li i {
-  font-size: 20px; /* Reduced icon size */
+  font-size: 20px; 
   color: azure;
-  margin-right: 8px; /* Reduced margin */
+  margin-right: 8px;
   vertical-align: middle;
 }
 
 .connect-info ul li a {
   color: azure;
   text-decoration: none;
-  font-size: 16px; /* Reduced font size */
+  font-size: 16px; 
   vertical-align: middle;
   transition: color 0.3s ease;
 }
@@ -330,14 +330,14 @@ body {
   color: rgb(23, 155, 155);
 }
 
-/* Media Queries for smaller screens */
+
 @media (max-width: 768px) {
   .header {
-      padding: 15px 5%; /* Further reduce padding on smaller screens */
+      padding: 15px 5%;
   }
 
   .navbar {
-      display: none; /* Hide the navigation links by default on smaller screens */
+      display: none; 
       position: absolute;
       top: 100%;
       left: 0;
@@ -350,88 +350,86 @@ body {
   }
 
   .navbar.active {
-      display: flex; /* Show navigation when the 'active' class is added */
+      display: flex;
   }
 
   .navbar a {
       display: block;
       margin: 10px 0;
       font-size: 20px;
-      opacity: 1; /* Ensure they are visible when the menu is open */
-      animation: none; /* Disable animations in the mobile menu */
+      opacity: 1; 
+      animation: none;
   }
 
   .mobile-menu {
-      display: block; /* Show the mobile menu icon */
+      display: block; 
   }
 
   .container {
-      flex-direction: column-reverse; /* Stack content and image */
-      padding-top: 60px; /* Adjust top padding */
-      text-align: center; /* Center align content */
-  }
+      flex-direction: column-reverse;
+      padding-top: 60px;
+      text-align: center;
+    }
 
   .home-content {
-      padding: 30px 0; /* Add some vertical padding */
+      padding: 30px 0;
   }
 
   .image-area {
-      width: 60%; /* Make image wider */
-      margin: 0 auto 20px; /* Center image and add bottom margin */
+      width: 60%; 
+      margin: 0 auto 20px;
   }
 
   .about-img {
-      margin-top: 20px; /* Adjust margin */
+      margin-top: 20px;
   }
 
   .about-img img {
-      width: 80%; /* Further increase image width */
+      width: 80%; 
   }
 
   .about-text h2 {
-      font-size: 32px; /* Slightly reduce font size */
+      font-size: 32px; 
   }
 
   .projects h2 {
-      font-size: 32px; /* Slightly reduce font size */
+      font-size: 32px; 
   }
 
   .connect h2 {
-      font-size: 32px; /* Slightly reduce font size */
+      font-size: 32px; 
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 300px) {
   .home-content h1 {
-      font-size: 32px; /* Further reduce for very small screens */
+      font-size: 28px;
   }
 
   .home-content h2 {
-      font-size: 20px; /* Further reduce */
-  }
+      font-size: 20px;
+    }
 
   .home-content p {
-      font-size: 14px; /* Further reduce */
+      font-size: 14px;
   }
 
   .image-area {
-      width: 80%; /* Even wider */
+      width: 60%; 
   }
 
   .about-text h2 {
-      font-size: 28px; /* Further reduce */
+      font-size: 28px;
   }
 
   .projects h2 {
-      font-size: 28px; /* Further reduce */
+      font-size: 28px;
   }
 
   .connect h2 {
-      font-size: 28px; /* Further reduce */
+      font-size: 28px;
   }
 }
-
-/* Keyframes (no changes needed) */
 @keyframes slideRight {
   0% {
       transform: translateX(-100px);
