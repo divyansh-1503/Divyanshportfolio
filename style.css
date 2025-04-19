@@ -185,9 +185,11 @@ body {
 }
 
 .about-img img {
-  width: 100%; /* Make image responsive within its grid cell */
+  margin-top: 100px  ;
+  width: 50%; /* Make image responsive within its grid cell */
   height: auto;
   border-radius: 50px;
+  border: 10px solid aqua;
 }
 
 .about-text h2 {
