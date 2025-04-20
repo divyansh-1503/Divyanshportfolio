@@ -401,9 +401,9 @@ body {
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 480px) {
   .home-content h1 {
-      font-size: 28px;
+      font-size: 32px;
   }
 
   .home-content h2 {
@@ -415,7 +415,7 @@ body {
   }
 
   .image-area {
-      width: 60%; 
+      width: 80%; 
   }
 
   .about-text h2 {
