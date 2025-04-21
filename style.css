@@ -41,9 +41,9 @@ body {
   text-decoration: none;
   font-weight: 500;
   margin-left: 15px;
-  transition: 0.1s;
+  transition: 0.5s;
   opacity: 0;
-  animation: slideTop 0.1s ease forwards 0.2s;
+  animation: slideTop 0.5s ease forwards 0.2s;
   animation-delay: calc(0.2s * var(--i));
 }
 
@@ -78,7 +78,7 @@ body {
 
 .home-content {
   max-width: 100%;
-  color: rgb(48, 212, 212);
+  color: rgb(108, 57, 249);
   opacity: 0;
   animation: fadeIn 1s ease forwards 0.4s;
   text-align: center;
@@ -93,18 +93,18 @@ body {
   font-size: 40px;
   font-weight: 700;
   margin: -3px 0 10px;
-  color: cornflowerblue;
+  color: rgb(106, 157, 253);
 }
 
 .home-content h3 {
   font-size: 20px;
   font-weight: 500;
-  color: azure;
+  color: rgb(10, 16, 124);
 }
 
 .home-content p {
   font-size: 16px;
-  color: azure;
+  color: rgb(136, 192, 242);
   margin: 10px 0;
 }
 
@@ -227,7 +227,7 @@ body {
 }
 
 .about-text h2 span {
-  color: rgb(23, 155, 155);
+  color: rgb(254, 254, 254);
 }
 
 .about-text h4 {
@@ -239,7 +239,7 @@ body {
 }
 
 .about-text p {
-  color: cadetblue;
+  color: rgb(245, 248, 248);
   font-size: 16px; 
   line-height: 1.5;
   margin-bottom: 25px; 
@@ -304,7 +304,7 @@ body {
 
 .connect h2 {
   margin-top: 30px;
-  color: rgb(23, 155, 155);
+  color: rgb(246, 250, 250);
   font-size: 40px; 
   text-align: center;
   margin-bottom: 30px;
