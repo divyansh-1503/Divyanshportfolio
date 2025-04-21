@@ -153,7 +153,7 @@ body {
 
 .image-area {
   width: 40%;
-  max-width: 300px;
+  max-width: 200px;
   overflow: hidden;
   border-radius: 25px;
   opacity: 0;
@@ -163,7 +163,7 @@ body {
 
 .image-area img {
   display: block;
-  width: 100%;
+  width: 80%;
   height: auto;
   border-radius: 25px;
   border: 10px solid aqua;
@@ -472,7 +472,7 @@ body {
   }
 
   .image-area {
-    width: 80%;
+    width: 50%;
   }
 
   .navbar {
