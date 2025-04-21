@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -37,14 +36,14 @@ body {
 
 .navbar a {
   display: inline-block;
-  font-size: 18px; /* Reduced font size for better mobile fit */
+  font-size: 18px;
   color: azure;
   text-decoration: none;
   font-weight: 500;
-  margin-left: 20px; /* Reduced left margin */
-  transition: 0.5s;
+  margin-left: 15px;
+  transition: 0.1s;
   opacity: 0;
-  animation: slideTop 0.5s ease forwards 0.2s;
+  animation: slideTop 0.1s ease forwards 0.2s;
   animation-delay: calc(0.2s * var(--i));
 }
 
@@ -52,55 +51,65 @@ body {
   color: rgb(31, 86, 126);
 }
 
+.navbar a.active {
+  color: rgb(31, 86, 126);
+}
+
+/* Mobile menu styles */
 .mobile-menu {
-  display: none; /* Hidden by default on larger screens */
+  display: none;
   font-size: 25px;
   color: azure;
   cursor: pointer;
+  z-index: 101;
+}
+
+.mobile-menu i {
+  transition: all 0.3s ease;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 5% 0; /* Adjusted horizontal padding */
+  padding: 80px 5% 0;
   min-height: calc(100vh - 60px);
 }
 
 .home-content {
-  max-width: 100%; /* Allow it to take full width on smaller screens */
+  max-width: 100%;
   color: rgb(48, 212, 212);
   opacity: 0;
   animation: fadeIn 1s ease forwards 0.4s;
-  text-align: center; /* Center text on smaller screens */
+  text-align: center;
 }
 
 .home-content h2 {
-  font-size: 24px; /* Reduced font size */
+  font-size: 24px;
   font-weight: 700;
 }
 
 .home-content h1 {
-  font-size: 40px; /* Reduced font size */
+  font-size: 40px;
   font-weight: 700;
-  margin: -3px 0 10px; /* Added some bottom margin */
+  margin: -3px 0 10px;
   color: cornflowerblue;
 }
 
 .home-content h3 {
-  font-size: 20px; /* Reduced font size */
+  font-size: 20px;
   font-weight: 500;
   color: azure;
 }
 
 .home-content p {
-  font-size: 16px; /* Reduced font size */
+  font-size: 16px;
   color: azure;
   margin: 10px 0;
 }
 
 .home-content h2:nth-of-type(2) {
-  margin-bottom: 20px; /* Reduced margin */
+  margin-bottom: 20px;
   animation: slideTop 1s ease forwards;
   animation-delay: 0.7s;
 }
@@ -113,21 +122,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px; /* Reduced top margin */
-  margin-bottom: 20px; /* Reduced bottom margin */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .home-sci a {
   display: inline-flex;
-  width: 35px; /* Slightly smaller icons */
-  height: 35px; /* Slightly smaller icons */
+  width: 35px;
+  height: 35px;
   background: transparent;
   border: 2px solid azure;
   border-radius: 50%;
-  font-size: 18px; /* Slightly smaller icon font */
+  font-size: 18px;
   color: azure;
   text-decoration: none;
-  margin: 0 10px; /* Reduced horizontal margin */
+  margin: 0 10px;
   justify-content: center;
   align-items: center;
   transition: .5s ease forwards;
@@ -143,13 +152,13 @@ body {
 }
 
 .image-area {
-  width: 40%; /* Adjust width as percentage */
-  max-width: 300px; /* Keep a maximum width */
+  width: 40%;
+  max-width: 300px;
   overflow: hidden;
   border-radius: 25px;
   opacity: 0;
   animation: slideBottom 1s ease forwards 0.8s;
-  margin-left: 20px; /* Add some margin for spacing */
+  margin-left: 20px;
 }
 
 .image-area img {
@@ -162,11 +171,11 @@ body {
 
 .btn-box {
   display: inline-flex;
-  padding: 12px 18px; /* Slightly smaller button */
+  padding: 12px 18px;
   background: azure;
   border-radius: 40px;
-  margin-top: 20px; /* Reduced top margin */
-  font-size: 14px; /* Reduced font size */
+  margin-top: 20px;
+  font-size: 14px;
   color: #0d0d68;
   letter-spacing: 1px;
   text-decoration: none;
@@ -181,15 +190,23 @@ body {
   box-shadow: 0 0 5px azure, 0 0 25px azure;
 }
 
+/* Updated about section styles */
 .about {
-  padding: 60px 5% 4rem; /* Adjusted padding */
-  grid-template-columns: 1fr; /* Stack columns on smaller screens */
-  text-align: center; 
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 5% 4rem;
+  margin-top: 10;
+  min-height: 100vh;
 }
 
 .about-img {
-  margin-top: 40px;
-  order: 2; 
+  margin-top: 15px;
+  margin-bottom: 20px;
+  order: 2;
+  display: flex;
+  justify-content: center;
 }
 
 .about-img img {
@@ -202,6 +219,7 @@ body {
 
 .about-text {
   order: 1; 
+  text-align: center;
 }
 
 .about-text h2 {
@@ -217,18 +235,19 @@ body {
   font-weight: 600;
   color: aliceblue;
   line-height: 1.6;
-  margin: 15px 0; 
+  margin: 20px 0; 
 }
 
 .about-text p {
   color: cadetblue;
   font-size: 16px; 
   line-height: 1.5;
-  margin-bottom: 20px; 
+  margin-bottom: 25px; 
 }
 
 .projects {
   padding: 60px 5% 4rem;
+  margin-top: 50px;
 }
 
 .projects h2 {
@@ -245,7 +264,7 @@ body {
 .project-card {
   background: #0a0a33;
   border-radius: 10px;
-  padding: 15px; /* Reduced padding */
+  padding: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -280,6 +299,7 @@ body {
 
 .connect {
   padding: 60px 5% 4rem;
+  margin-top: 50px;
 }
 
 .connect h2 {
@@ -330,155 +350,216 @@ body {
   color: rgb(23, 155, 155);
 }
 
-
+/* Responsive styles */
 @media (max-width: 768px) {
   .header {
-      padding: 15px 5%;
+    padding: 15px 5%;
   }
 
+  .logo {
+    opacity: 1;
+    animation: none;
+  }
+
+  /* Modified navbar styles for dropdown menu */
   .navbar {
-      display: none; 
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: #2f2ff6;
-      padding: 10px 5%;
-      flex-direction: column;
-      align-items: flex-start;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 5px;
+    width: 150px;
+    background: #2f2ff6;
+    padding: 8px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 8px 8px;
+    opacity: 1;
+    animation: dropDown 0.3s ease forwards;
+    z-index: 99;
   }
 
   .navbar.active {
-      display: flex;
+    display: flex;
   }
 
   .navbar a {
-      display: block;
-      margin: 10px 0;
-      font-size: 20px;
-      opacity: 1; 
-      animation: none;
+    display: block;
+    margin: 5px 0;
+    font-size: 18px;
+    opacity: 1;
+    animation: none;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar a:last-child {
+    border-bottom: none;
   }
 
   .mobile-menu {
-      display: block; 
+    display: block;
+    position: relative;
+    z-index: 100;
   }
 
   .container {
-      flex-direction: column-reverse;
-      padding-top: 60px;
-      text-align: center;
-    }
+    flex-direction: column-reverse;
+    padding-top: 120px;
+    text-align: center;
+  }
 
   .home-content {
-      padding: 30px 0;
+    padding: 30px 0;
   }
 
   .image-area {
-      width: 60%; 
-      margin: 0 auto 20px;
-  }
-
-  .about-img {
-      margin-top: 20px;
+    width: 60%;
+    margin: 0 auto 20px;
   }
 
   .about-img img {
-      width: 80%; 
+    width: 60%;
   }
 
   .about-text h2 {
-      font-size: 32px; 
+    font-size: 32px;
   }
 
   .projects h2 {
-      font-size: 32px; 
+    font-size: 32px;
   }
 
   .connect h2 {
-      font-size: 32px; 
+    font-size: 32px;
+  }
+}
+
+/* Desktop styles for about section */
+@media (min-width: 769px) {
+  .about {
+    flex-direction: row;
+    text-align: left;
+    gap: 30px;
+  }
+  
+  .about-img {
+    margin-top: 0;
+    order: 1;
+    flex: 1;
+  }
+  
+  .about-text {
+    order: 2;
+    flex: 1;
+    text-align: left;
   }
 }
 
 @media (max-width: 480px) {
   .home-content h1 {
-      font-size: 32px;
+    font-size: 32px;
   }
 
   .home-content h2 {
-      font-size: 20px;
-    }
+    font-size: 20px;
+  }
 
   .home-content p {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   .image-area {
-      width: 80%; 
+    width: 80%;
+  }
+
+  .navbar {
+    width: 170px;
+    right: 5%;
+  }
+
+  .navbar a {
+    margin: 3px 0;
+    font-size: 16px;
+    padding: 6px 0;
   }
 
   .about-text h2 {
-      font-size: 28px;
+    font-size: 28px;
   }
 
   .projects h2 {
-      font-size: 28px;
+    font-size: 28px;
   }
 
   .connect h2 {
-      font-size: 28px;
+    font-size: 28px;
   }
 }
+
 @keyframes slideRight {
   0% {
-      transform: translateX(-100px);
-      opacity: 0;
+    transform: translateX(-100px);
+    opacity: 0;
   }
   100% {
-      transform: translateX(0px);
-      opacity: 1;
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
 
 @keyframes slideTop {
   0% {
-      transform: translateY(100px);
-      opacity: 0;
+    transform: translateY(100px);
+    opacity: 0;
   }
   100% {
-      transform: translateY(0px);
-      opacity: 1;
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
 @keyframes slideLeft {
   0% {
-      transform: translateX(100px);
-      opacity: 0;
+    transform: translateX(100px);
+    opacity: 0;
   }
   100% {
-      transform: translateX(0px);
-      opacity: 1;
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
 
 @keyframes slideBottom {
   0% {
-      transform: translateY(-100px);
-      opacity: 0;
+    transform: translateY(-100px);
+    opacity: 0;
   }
   100% {
-      transform: translateY(0px);
-      opacity: 1;
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
 @keyframes fadeIn {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
+  }
+}
+
+/* Add dropdown animation */
+@keyframes dropDown {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
